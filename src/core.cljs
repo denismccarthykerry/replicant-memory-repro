@@ -49,8 +49,7 @@
          ;(ds/entity @conn [:db/ident :current-influencer])
          :on                  {:input [[:db/transact [{:db/ident    :mobile-number
                                                        :field/value :event/target.value}]]]}
-         :value               field-value}]]
-      ]]))
+         :value               field-value}]]]]))
 
 (defn interpolate-actions
   "Replaces any event-related placeholders in the action with actual values from the event.
