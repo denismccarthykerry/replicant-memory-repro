@@ -154,5 +154,4 @@
 
     ;; Set initial location on startup
     (ds/transact! conn [{:db/ident       :system/app
-                            :app/started-at (js/Date.)}])
-    ))
+                            :app/started-at (js/Date.)}])))
