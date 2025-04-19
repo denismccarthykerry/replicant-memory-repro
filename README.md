@@ -34,9 +34,18 @@ This is a simple ClojureScript application that demonstrates a problem with the 
 
 ## Issue Description
 
-The repository demonstrates a potential issue with how Replicant handles the intl-tel-input component, particularly in relation to memory management. The problem can be observed when...
+The repository demonstrates a potential issue with how Replicant handles the intl-tel-input component, particularly in relation to memory management.
 
-[Add details about how to reproduce the specific issue]
+### Steps to Reproduce
+
+1. Open the application in a browser
+2. Open the browser's developer console
+3. Observe that at startup, the intl-tel-input instance is correctly created (you'll see a message like `iti = [object Object]` in the console)
+4. Type a number in the phone input field
+5. Observe the console log that shows `Updating node, params = {...}`
+6. Notice that although the `:replicant/memory` key is present in the logged object, its value is `nil` instead of containing the intl-tel-input instance that was stored during the mount phase
+
+This suggests that the memory stored during the `mount-intl-tel-input` function's execution (via the `remember` callback) is not being properly maintained when the component updates.
 
 ## License
 
