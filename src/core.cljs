@@ -7,8 +7,6 @@
     [datascript.core :as ds]
     ["intl-tel-input/build/js/utils.js" :as intl-tel-input-utils]))
 
-
-
 (defonce conn (ds/create-conn))
 
 (defn load-utils-fn []
@@ -155,14 +153,7 @@
                (:replicant/dom-event event-data))
              (execute-actions event-data conn))))
 
-
-
-
-
     ;; Set initial location on startup
     (ds/transact! conn [{:db/ident       :system/app
                             :app/started-at (js/Date.)}])
-
-    #_(start-time-updater! conn)
-
     ))
