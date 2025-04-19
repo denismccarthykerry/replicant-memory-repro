@@ -1,0 +1,19 @@
+{:paths ["src" "resources"]
+ :deps  {org.clojure/clojure                 {:mvn/version "1.12.0"}
+         org.clojure/clojurescript           {:mvn/version "1.11.60"}
+         thheller/shadow-cljs                {:mvn/version "2.28.18"}
+         no.cjohansen/portfolio              {:mvn/version "2025.01.28"}
+         no.cjohansen/replicant              {:mvn/version "2025.03.27"}
+         datascript/datascript               {:mvn/version "1.5.4"}
+         com.domkm/silk                      {:mvn/version "0.1.2"}
+         lambdaisland/uri                    {:mvn/version "1.19.155"}
+         no.cjohansen/phosphor-clj           {:mvn/version "2025.03.14"}
+         camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"}
+         com.taoensso/telemere               {:mvn/version "1.0.0-RC2"}}
+
+ :aliases
+ {:dev       {:extra-paths ["dev"]}
+
+  :test      {:extra-paths ["test"]}
+
+  :portfolio {:main-opts ["-m" "shadow.cljs.devtools.cli" "watch" "portfolio"]}}}

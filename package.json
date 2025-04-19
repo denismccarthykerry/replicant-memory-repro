@@ -1,0 +1,23 @@
+{
+  "name": "replicant-memory-repro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "portfolio": "shadow-cljs watch portfolio",
+    "build": "shadow-cljs release app",
+    "test": "shadow-cljs watch test",
+    "tailwind": "tailwindcss -i ./resources/css/input.css -o ./resources/public/css/styles.css --watch",
+    "tailwind:build": "tailwindcss -i ./resources/css/input.css -o ./resources/public/css/styles.css --minify",
+    "dev:portfolio": "concurrently \"npm run portfolio\" \"npm run tailwind\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "shadow-cljs": "^2.25.10",
+    "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "intl-tel-input": "^25.3.1",
+    "snabbdom": "3.5.1"
+  }
+}

@@ -1,0 +1,14 @@
+[env]
+# Set environment variables for the project
+NODE_ENV = "development"
+
+[tools]
+# Specify the Node.js version to use
+node = "22"
+
+[tasks]
+# Individual tasks
+tailwind-app = "npx tailwindcss -i ./resources/css/input.css -o ./resources/public/css/styles.css --watch"
+
+# Task to run Portfolio with Tailwind watching together
+dev-app = "npx concurrently \"npx shadow-cljs watch app\" \"mise run tailwind-app\""

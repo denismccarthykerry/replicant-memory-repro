@@ -1,0 +1,30 @@
+# npm
+node_modules/
+npm-debug.log
+
+# ClojureScript/Shadow-cljs
+.shadow-cljs/
+.cpcache/
+report.html
+.nrepl-port
+
+# Mac
+.DS_Store
+
+# Build outputs
+/target/
+/resources/public/js/cljs-runtime/
+/resources/public/js/manifest.edn
+/resources/public/js/main.js
+/resources/public/css/styles.css
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.calva/
+.lsp/
+.clj-kondo/
+
+# Logs
+*.log
